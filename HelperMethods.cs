@@ -114,3 +114,13 @@
             }
             return elementDisplayed;
         }
+
+        public string GetValue(IWebElement element)
+        {
+            return element.GetAttribute("value");
+        }
+
+        public string GetTextFromDDL(IWebElement element)
+        {
+            return new SelectElement(element).AllSelectedOptions.SingleOrDefault().Text;
+        }
